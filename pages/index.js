@@ -2,14 +2,15 @@ import React from "react";
 
 //INERNAL IMPORT
 import Style from "../styles/index.module.css";
-import { HeroSection } from "../components/componentsindex";
+import { HeroSection, Service } from "../components/componentsindex";
 
-const index = () => {
+const Home = () => {
   return (
     <div className={Style.homePage}>
       <HeroSection />
+      <Service />
     </div>
   )
 };
 
-export default index;
+export default Home;
