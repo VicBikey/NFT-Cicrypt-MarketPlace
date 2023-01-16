@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { GrClose } from "react-icons/gr";
 import {
   TiSocialFacebook,
@@ -11,16 +12,20 @@ import {
   TiArrowSortedDown,
   TiArrowSortedUp,
 } from "react-icons/ti";
+import { DiJqueryLogo } from "react-icons/di";
 
 //INTERNAL IMPORT
 import Style from "./SideBar.module.css";
 import images from "../../../img";
 import Button from "../../Button/Button";
+import { Router } from "next/router";
 
-const SideBar = ({ setOpenSideMenu }) => {
+const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
   //------USESTATE
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
+
+  const router = useRouter();
 
   //--------DISCOVER NAVIGATION MENU
   const discover = [
@@ -30,11 +35,11 @@ const SideBar = ({ setOpenSideMenu }) => {
     },
     {
       name: "Search",
-      link: "search",
+      link: "searchPage",
     },
     {
       name: "Author Profile",
-      link: "author-profile",
+      link: "author",
     },
     {
       name: "NFT Details",
@@ -42,11 +47,15 @@ const SideBar = ({ setOpenSideMenu }) => {
     },
     {
       name: "Account Setting",
-      link: "account-setting",
+      link: "account",
+    },
+    {
+      name: "Upload NFT",
+      link: "uploadNFT",
     },
     {
       name: "Connect Wallet",
-      link: "connect-wallet",
+      link: "connectWallet",
     },
     {
       name: "Blog",
@@ -57,19 +66,19 @@ const SideBar = ({ setOpenSideMenu }) => {
   const helpCenter = [
     {
       name: "About",
-      link: "about",
+      link: "aboutus",
     },
     {
       name: "Contact Us",
-      link: "contact-us",
+      link: "contactus",
     },
     {
       name: "Sign Up",
-      link: "sign-up",
+      link: "signUp",
     },
     {
-      name: "Sign In",
-      link: "sign-in",
+      name: "LogIn",
+      link: "login",
     },
     {
       name: "Subscription",
@@ -105,7 +114,12 @@ const SideBar = ({ setOpenSideMenu }) => {
       />
 
       <div className={Style.sideBar_box}>
-        <Image src={images.logo} alt="logo" width={150} height={150} />
+        {/* <Image src={images.logo} alt="logo" width={150} height={150} /> */}
+        <p>
+          <a href="/">
+            <DiJqueryLogo className={Style.sideBar_box_logo} />
+          </a>
+        </p>
         <p>
           Discover the most outstanding articles on all topices of NFT & write
           your own stories and share them
@@ -172,7 +186,15 @@ const SideBar = ({ setOpenSideMenu }) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName="Create" handleClick={() => {}} />
+        {currentAccount == "" ? (
+          <Button btnName="connect" handleClick={() => connectWallet()} />
+        ) : (
+          <Button
+            btnName="Create"
+            handleClick={() => router.push("/uploadNFT")}
+          />
+        )}
+
         <Button btnName="Connect Wallet" handleClick={() => {}} />
       </div>
     </div>

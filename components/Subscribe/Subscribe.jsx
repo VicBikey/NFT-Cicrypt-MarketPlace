@@ -11,7 +11,7 @@ const Subscribe = () => {
     <div className={Style.subscribe}>
       <div className={Style.subscribe_box}>
         <div className={Style.subscribe_box_left}>
-          <h2>Never miss a drop </h2>
+          <h2>Never miss a drop</h2>
           <p>
             Subcribe to our super-exclusive drop list and be the first to know
             abour upcoming drops

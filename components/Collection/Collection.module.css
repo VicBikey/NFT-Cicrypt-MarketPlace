@@ -59,6 +59,10 @@
         width: 90%;
     }
 
+    .collection_title h2{
+        font-size: 2rem;
+    }
+
     .collection_box{
         width: 90%;
         grid-template-columns: 1fr;
