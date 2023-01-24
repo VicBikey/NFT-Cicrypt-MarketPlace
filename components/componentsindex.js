@@ -13,9 +13,7 @@ import Collection from "./Collection/Collection";
 import AudioLive from "./AudioLive/AudioLive";
 import LikeProfile from "./LikeProfile/LikeProfile";
 import FollowerTab from "./FollowerTab/FollowerTab";
-import Slider from "./Slider/Slider";
 import Brand from "./Brand/Brand";
-import Video from "./Video/Video";
 import Loader from "./Loader/Loader";
 import Error from "./Error/Error";
 
@@ -35,9 +33,7 @@ export {
   AudioLive,
   LikeProfile,
   FollowerTab,
-  Slider,
   Brand,
-  Video,
   Loader,
   Error,
 };

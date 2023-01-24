@@ -14,9 +14,7 @@ import {
   Collection,
   AudioLive,
   FollowerTab,
-  Slider,
   Brand,
-  Video,
   Loader,
 } from "../components/componentsindex";
 import { getTopCreators } from "../TopCreators/TopCreators";
@@ -36,12 +34,13 @@ const Home = () => {
 
   useEffect(() => {
     fetchNFTs().then((items) => {
-if(!!items){
-  setNfts(items.reverse());
-  setNftsCopy(items);
-}
-      
+      if (!!items) {
+        setNfts(items.reverse());
+        setNftsCopy(items);
+      }
+
     });
+
   }, []);
 
   //CREATOR LIST
@@ -64,7 +63,6 @@ if(!!items){
         <FollowerTab TopCreator={creators} />
       )}
 
-      <Slider />
       <Collection />
       <Title
         heading="Featured NFTs"
@@ -80,7 +78,6 @@ if(!!items){
       <Category />
       <Subscribe />
       <Brand />
-      <Video />
     </div>
   );
 };
