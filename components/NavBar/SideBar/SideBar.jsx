@@ -57,10 +57,7 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
       name: "Connect Wallet",
       link: "connectWallet",
     },
-    {
-      name: "Blog",
-      link: "blog",
-    },
+
   ];
   //------HELP CNTEER
   const helpCenter = [
@@ -195,7 +192,7 @@ const SideBar = ({ setOpenSideMenu, currentAccount, connectWallet }) => {
           />
         )}
 
-        <Button btnName="Connect Wallet" handleClick={() => {}} />
+        <Button btnName="Connect Wallet" handleClick={() => { }} />
       </div>
     </div>
   );
