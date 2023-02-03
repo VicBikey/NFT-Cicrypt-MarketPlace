@@ -1,4 +1,4 @@
-# Sample Hardhat Project
+https://connecting-smart-contract-c54uq8z23-vikibikey-gmailcom.vercel.app/
 
 This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
 
