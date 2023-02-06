@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@openzeppelin/contracts": "^4.8.0",
     "axios": "^1.2.2",
     "ether": "^0.0.9",
     "framer-motion": "^7.6.19",
+    "gh-pages": "^5.0.0",
     "ipfs-http-client": "^59.0.0",
     "next": "13.0.4",
     "openzeppelin-solidity": "4.6.0",
@@ -21,6 +23,7 @@
     "react-dropzone": "^14.2.3",
     "react-icons": "^4.6.0",
     "react-router-dom": "^6.7.0",
+    "save-dev": "^0.0.1-security",
     "web3modal": "^1.9.10"
   },
   "devDependencies": {
