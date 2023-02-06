@@ -1,4 +1,4 @@
-https://connecting-smart-contract-c54uq8z23-vikibikey-gmailcom.vercel.app/
+Project URL- https://connecting-smart-contract.vercel.app/
 
 This is Fullstack NFT MarketPlace Website using React JS, Next JS, and Solidity for writing the smart contract.
 It includes the following:
