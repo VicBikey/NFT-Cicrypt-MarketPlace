@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Wenb3Modal from "web3modal";
+import Web3Modal from "web3modal";
 import { ethers } from "ethers";
 import { useRouter } from "next/router";
 import axios from "axios";
@@ -53,7 +53,7 @@ const connectingWithSmartContract = async () => {
 export const NFTMarketplaceContext = React.createContext();
 
 export const NFTMarketplaceProvider = ({ children }) => {
-  const titleData = "Discover, collect, and sell NFTs";
+  const titleData = "Create and Sell Your NFTs";
 
   //------USESTAT
   const [error, setError] = useState("");
@@ -74,18 +74,14 @@ export const NFTMarketplaceProvider = ({ children }) => {
       if (accounts.length) {
         setCurrentAccount(accounts[0]);
       } else {
-        setError("No Account Found");
+        setError("Account missing");
         setOpenError(true);
       }
     } catch (error) {
-      setError("Something wrong while connecting to wallet");
+      setError("error connecting to wallet");
       setOpenError(true);
     }
   };
-
-  // useEffect(() => {
-  //   checkIfWalletConnected();
-  // }, []);
 
   //---CONNET WALLET FUNCTION
   const connectWallet = async () => {
@@ -97,7 +93,6 @@ export const NFTMarketplaceProvider = ({ children }) => {
         method: "eth_requestAccounts",
       });
       setCurrentAccount(accounts[0]);
-      // window.location.reload();
       connectingWithSmartContract();
     } catch (error) {
       setError("Error while connecting to wallet");
@@ -105,7 +100,7 @@ export const NFTMarketplaceProvider = ({ children }) => {
     }
   };
 
-  //---UPLOAD TO IPFS FUNCTION
+  //---LOADING TO IPFS FUNCTION
   const uploadToIPFS = async (file) => {
     try {
       const added = await client.add({ content: file });

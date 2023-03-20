@@ -18,7 +18,7 @@ const Category = () => {
     },
     {
       images: images.creatorbackground3,
-      name: "Entirtment Art",
+      name: "Entertaintment Art",
     },
     {
       images: images.creatorbackground4,
@@ -68,12 +68,9 @@ const Category = () => {
             />
 
             <div className={Style.category_box_title}>
-              <span>
-                <BsCircleFill />
-              </span>
               <div className={Style.category_box_title_info}>
                 <h4>{el.name}</h4>
-                <small>{i + 1}995 NFTS</small>
+                <small>{i + 2004} NFTS</small>
               </div>
             </div>
           </div>

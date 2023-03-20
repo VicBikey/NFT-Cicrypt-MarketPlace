@@ -136,19 +136,9 @@ const Collection = () => {
   return (
     <div className={Style.collection}>
       <div className={Style.collection_title}>
-        <h2>Top List Creators</h2>
-        <div className={Style.collection_collections}>
-          <div className={Style.collection_collections_btn}>
-            <button onClick={() => openPopular()}>
-              <BsFillAlarmFill /> 24 hours
-            </button>
-            <button onClick={() => openFollower()}>
-              <BsCalendar3 /> 7 days
-            </button>
-            <button onClick={() => openNews()}>
-              <BsFillCalendarDateFill /> 30 days
-            </button>
-          </div>
+        <div>
+        <h2>My Best NFT Creations</h2>
+        <h3>Explore some of the most beautiful NFT creations </h3>
         </div>
       </div>
       {popular && (

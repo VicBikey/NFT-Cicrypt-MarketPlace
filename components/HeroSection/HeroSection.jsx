@@ -17,13 +17,12 @@ const HeroSection = () => {
     <div className={Style.heroSection}>
       <div className={Style.heroSection_box}>
         <div className={Style.heroSection_box_left}>
-          <h1>{titleData} 🖼️</h1>
+          <h1>{titleData} </h1>
           <p>
-            Discover the most outstanding NTFs in all topics of life. Creative
-            your NTFs and sell them
+           Search Fascinating NTFs of all aspects, Create and sell them
           </p>
           <Button
-            btnName="Start your search"
+            btnName="search here"
             handleClick={() => router.push("/searchPage")}
           />
         </div>

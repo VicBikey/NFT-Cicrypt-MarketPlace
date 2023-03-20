@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import Image from "next/image";
-import { DiJqueryLogo } from "react-icons/di";
 //----IMPORT ICON
 import { MdNotifications } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
@@ -29,12 +28,12 @@ const NavBar = () => {
 
   const openMenu = (e) => {
     const btnText = e.target.innerText;
-    if (btnText == "Discover") {
+    if (btnText == "Explore") {
       setDiscover(true);
       setHelp(false);
       setNotification(false);
       setProfile(false);
-    } else if (btnText == "Help Center") {
+    } else if (btnText == "Service Support") {
       setDiscover(false);
       setHelp(true);
       setNotification(false);
@@ -86,12 +85,11 @@ const NavBar = () => {
     <div className={Style.navbar}>
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
-          <div className={Style.logo}>
-            <DiJqueryLogo onClick={() => router.push("/")} />
-          </div>
+          <Image src={images.logo} alt="Navbar logo" height={100} width={100} />
+
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
-              <input type="text" placeholder="Search NFT" />
+              <input type="text" placeholder="Search choice NFTs" />
               <BsSearch onClick={() => {}} className={Style.search_icon} />
             </div>
           </div>
@@ -100,8 +98,8 @@ const NavBar = () => {
         {/* //END OF LEFT SECTION */}
         <div className={Style.navbar_container_right}>
           <div className={Style.navbar_container_right_discover}>
-            {/* DISCOVER MENU */}
-            <p onClick={(e) => openMenu(e)}>Discover</p>
+            {/* for Explore menu  */}
+            <p onClick={(e) => openMenu(e)}>Explore</p>
             {discover && (
               <div className={Style.navbar_container_right_discover_box}>
                 <Discover />
@@ -111,7 +109,7 @@ const NavBar = () => {
 
           {/* HELP CENTER MENU */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => openMenu(e)}>Help Center</p>
+            <p onClick={(e) => openMenu(e)}>Service Support </p>
             {help && (
               <div className={Style.navbar_container_right_help_box}>
                 <HelpCenter />
@@ -131,7 +129,7 @@ const NavBar = () => {
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
             {currentAccount == "" ? (
-              <Button btnName="Connect" handleClick={() => connectWallet()} />
+              <Button btnName="Connect Wallet" handleClick={() => connectWallet()} />
             ) : (
               <Button
                 btnName="Create"

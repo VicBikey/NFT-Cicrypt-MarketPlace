@@ -20,7 +20,7 @@ const Form = () => {
             <label htmlFor="name">Username</label>
             <input
               type="text"
-              placeholder="shoaib bhai"
+              placeholder=""
               className={Style.Form_box_input_userName}
             />
           </div>
@@ -42,7 +42,7 @@ const Form = () => {
               id=""
               cols="30"
               rows="6"
-              placeholder="something about yourself in few words"
+              placeholder="Describe yourself in few words"
             ></textarea>
           </div>
 
@@ -64,7 +64,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialFacebook />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="facebook-url.." />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -73,7 +73,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialTwitter />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="twitter-url.." />
               </div>
             </div>
             <div className={Style.Form_box_input}>
@@ -82,7 +82,7 @@ const Form = () => {
                 <div className={Style.Form_box_input_box_icon}>
                   <TiSocialInstagram />
                 </div>
-                <input type="text" placeholder="http://shoaib" />
+                <input type="text" placeholder="Instragram-url.." />
               </div>
             </div>
           </div>
@@ -95,7 +95,7 @@ const Form = () => {
               </div>
               <input
                 type="text"
-                placeholder="0xEA674fdDe714fd979de3EdF0F56AA9716B898ec8"
+                placeholder=""
               />
               <div className={Style.Form_box_input_box_icon}>
                 <MdOutlineContentCopy />

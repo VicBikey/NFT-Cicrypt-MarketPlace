@@ -12,14 +12,13 @@ import {
   Filter,
   NFTCard,
   Collection,
-  AudioLive,
   FollowerTab,
   Brand,
   Loader,
 } from "../components/componentsindex";
 import { getTopCreators } from "../TopCreators/TopCreators";
 
-//IMPORTING CONTRCT DATA
+//IMPORTING CONTRACT DATA
 import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const Home = () => {
@@ -38,9 +37,7 @@ const Home = () => {
         setNfts(items.reverse());
         setNftsCopy(items);
       }
-
     });
-
   }, []);
 
   //CREATOR LIST
@@ -52,28 +49,11 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
-      <Title
-        heading="Audio Collection"
-        paragraph="Discover the most outstanding NFTs in all topics of life."
-      />
-      <AudioLive />
-      {creators.length == 0 ? (
-        <Loader />
-      ) : (
-        <FollowerTab TopCreator={creators} />
-      )}
 
       <Collection />
       <Title
-        heading="Featured NFTs"
-        paragraph="Discover the most outstanding NFTs in all topics of life."
-      />
-      <Filter />
-      {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />}
-
-      <Title
-        heading="Browse by category"
-        paragraph="Explore the NFTs in the most featured categories."
+        heading="All featured NFTs"
+        paragraph="Explore Top NFTs in every Sphere of life."
       />
       <Category />
       <Subscribe />

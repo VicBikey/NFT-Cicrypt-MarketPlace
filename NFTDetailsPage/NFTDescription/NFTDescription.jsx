@@ -45,13 +45,6 @@ const NFTDescription = ({ nft }) => {
     images.user4,
     images.user5,
   ];
-  const provananceArray = [
-    images.user6,
-    images.user7,
-    images.user8,
-    images.user9,
-    images.user10,
-  ];
   const ownerArray = [
     images.user1,
     images.user8,
@@ -81,11 +74,11 @@ const NFTDescription = ({ nft }) => {
   const openTabs = (e) => {
     const btnText = e.target.innerText;
 
-    if (btnText == "Bid History") {
+    if (btnText == "") {
       setHistory(true);
       setProvanance(false);
       setOwner(false);
-    } else if (btnText == "Provanance") {
+    } else if (btnText == "Provenance") {
       setHistory(false);
       setProvanance(true);
       setOwner(false);
@@ -111,7 +104,6 @@ const NFTDescription = ({ nft }) => {
       <div className={Style.NFTDescription_box}>
         {/* //Part ONE */}
         <div className={Style.NFTDescription_box_share}>
-          <p>Virtual Worlds</p>
           <div className={Style.NFTDescription_box_share_box}>
             <MdCloudUpload
               className={Style.NFTDescription_box_share_box_icon}
@@ -121,10 +113,10 @@ const NFTDescription = ({ nft }) => {
             {social && (
               <div className={Style.NFTDescription_box_share_box_social}>
                 <a href="#">
-                  <TiSocialFacebook /> Facebooke
+                  <TiSocialFacebook /> Facebook
                 </a>
                 <a href="#">
-                  <TiSocialInstagram /> Instragram
+                  <TiSocialInstagram /> Instagram
                 </a>
                 <a href="#">
                   <TiSocialLinkedin /> LinkedIn
@@ -179,7 +171,7 @@ const NFTDescription = ({ nft }) => {
                 <small>Creator</small> <br />
                 <Link href={{ pathname: "/author", query: `${nft.seller}` }}>
                   <span>
-                    Karli Costa <MdVerified />
+                    Chibuike Asogwa <MdVerified />
                   </span>
                 </Link>
               </div>
@@ -197,7 +189,7 @@ const NFTDescription = ({ nft }) => {
               <div className={Style.NFTDescription_box_profile_box_right_info}>
                 <small>Collection</small> <br />
                 <span>
-                  Mokeny app <MdVerified />
+                  Cartoon app <MdVerified />
                 </span>
               </div>
             </div>
@@ -214,7 +206,7 @@ const NFTDescription = ({ nft }) => {
                   Style.NFTDescription_box_profile_biding_box_timer_item
                 }
               >
-                <p>2</p>
+                <p>13</p>
                 <span>Days</span>
               </div>
               <div
@@ -222,7 +214,7 @@ const NFTDescription = ({ nft }) => {
                   Style.NFTDescription_box_profile_biding_box_timer_item
                 }
               >
-                <p>22</p>
+                <p>18</p>
                 <span>hours</span>
               </div>
               <div
@@ -230,7 +222,7 @@ const NFTDescription = ({ nft }) => {
                   Style.NFTDescription_box_profile_biding_box_timer_item
                 }
               >
-                <p>45</p>
+                <p>38</p>
                 <span>mins</span>
               </div>
               <div
@@ -238,7 +230,7 @@ const NFTDescription = ({ nft }) => {
                   Style.NFTDescription_box_profile_biding_box_timer_item
                 }
               >
-                <p>12</p>
+                <p>50</p>
                 <span>secs</span>
               </div>
             </div>
@@ -249,9 +241,9 @@ const NFTDescription = ({ nft }) => {
                   Style.NFTDescription_box_profile_biding_box_price_bid
                 }
               >
-                <small>Current Bid</small>
+                <small>Current Bid(in ETH)</small>
                 <p>
-                  {nft.price} ETH <span>( ≈ $3,221.22)</span>
+                  {nft.price} <span>( $8,921.89)</span>
                 </p>
               </div>
 
@@ -259,11 +251,7 @@ const NFTDescription = ({ nft }) => {
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_button}>
-              currentAccount == nft.seller.toLowerCase() ? (
-              <p>You can't buy your own NFT</p>
-              ) : currentAccount == nft.owner.toLowerCase() ? (
               <Button
-                icon=<FaWallet />
                 btnName="List on Marketplace"
                 handleClick={() =>
                   router.push(
@@ -272,17 +260,13 @@ const NFTDescription = ({ nft }) => {
                 }
                 classStyle={Style.button}
               />
-              ) : (
               <Button
-                icon=<FaWallet />
                 btnName="Buy NFT"
                 handleClick={() => buyNFT(nft)}
                 classStyle={Style.button}
               />
-              )
 
               <Button
-                icon=<FaPercentage />
                 btnName="Make offer"
                 handleClick={() => { }}
                 classStyle={Style.button}
@@ -290,9 +274,6 @@ const NFTDescription = ({ nft }) => {
             </div>
 
             <div className={Style.NFTDescription_box_profile_biding_box_tabs}>
-              <button onClick={(e) => openTabs(e)}>Bid History</button>
-              <button onClick={(e) => openTabs(e)}>Provanance</button>
-              <button onClick={() => openOwmer()}>Owner</button>
             </div>
 
             {history && (
@@ -300,11 +281,7 @@ const NFTDescription = ({ nft }) => {
                 <NFTTabs dataTab={historyArray} />
               </div>
             )}
-            {provanance && (
-              <div className={Style.NFTDescription_box_profile_biding_box_card}>
-                <NFTTabs dataTab={provananceArray} />
-              </div>
-            )}
+            
 
             {owner && (
               <div className={Style.NFTDescription_box_profile_biding_box_card}>

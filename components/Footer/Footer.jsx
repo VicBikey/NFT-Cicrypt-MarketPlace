@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { DiJqueryLogo } from "react-icons/di";
 import {
   TiSocialFacebook,
   TiSocialLinkedin,
@@ -22,14 +21,10 @@ const Footer = () => {
     <div className={Style.footer}>
       <div className={Style.footer_box}>
         <div className={Style.footer_box_social}>
-          {/* <Image src={images.logo} alt="footer logo" height={100} width={100} /> */}
-          <a href="/">
-            <DiJqueryLogo className={Style.footer_box_social_logo} />
-          </a>
+          <Image src={images.logo} alt="footer logo" height={100} width={100} />
           <p>
-            The world’s first and largest digital marketplace for crypto
-            collectibles and non-fungible tokens (NFTs). Buy, sell, and discover
-            exclusive digital items.
+            Buy, Sell, and Explore marketplace
+            for crypto NFTs and collectibles.
           </p>
 
           <div className={Style.footer_social}>
@@ -52,12 +47,12 @@ const Footer = () => {
         </div>
 
         <div className={Style.footer_box_discover}>
-          <h3>Discover</h3>
+          <h3>Explore</h3>
           <Discover />
         </div>
 
         <div className={Style.footer_box_help}>
-          <h3>Help Center</h3>
+          <h3>Service Support</h3>
           <HelpCenter />
         </div>
 
@@ -70,8 +65,7 @@ const Footer = () => {
           </div>
           <div className={Style.subscribe_box_info}>
             <p>
-              Discover, collect, and sell extraordinary NFTs OpenSea is the
-              world first and largest NFT marketplace
+              Explore, buy, and sell outstanding NFTs
             </p>
           </div>
         </div>

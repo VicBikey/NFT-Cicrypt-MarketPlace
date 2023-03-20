@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+import { AiFillBook, AiFillFire, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { MdVerified, MdTimer } from "react-icons/md";
 import { TbArrowBigLeftLines, TbArrowBigRightLine } from "react-icons/tb";
 
@@ -14,67 +14,29 @@ const BigNFTSilder = () => {
 
   const sliderData = [
     {
-      title: "Hello NFT",
-      id: 1,
-      name: "Daulat Hussain",
-      collection: "GYm",
-      price: "00664 ETH",
-      like: 243,
-      image: images.user1,
-      nftImage: images.nft_image_1,
-      time: {
-        days: 21,
-        hours: 40,
-        minutes: 81,
-        seconds: 15,
-      },
-    },
-    {
-      title: "Buddy NFT",
-      id: 2,
-      name: "Shoaib Hussain",
-      collection: "Home",
-      price: "0000004 ETH",
-      like: 243,
+      title: "Toons NFT",
+      name: "April Rashford",
+      price: "000045 ETH",
       image: images.user2,
       nftImage: images.nft_image_2,
       time: {
-        days: 77,
-        hours: 11,
-        minutes: 21,
-        seconds: 45,
+        days: 40,
+        hours: 13,
+        minutes: 31,
+        seconds: 40,
       },
     },
     {
-      title: "Gym NFT",
-      id: 3,
-      name: "Raayan Hussain",
-      collection: "GYm",
-      price: "0000064 ETH",
-      like: 243,
+      title: "Ape NFT",
+      name: "Vincent Arthur",
+      price: "0000089 ETH",
       image: images.user3,
       nftImage: images.nft_image_3,
       time: {
-        days: 37,
-        hours: 20,
-        minutes: 11,
-        seconds: 55,
-      },
-    },
-    {
-      title: "Home NFT",
-      id: 4,
-      name: "Raayan Hussain",
-      collection: "GYm",
-      price: "4664 ETH",
-      like: 243,
-      image: images.user4,
-      nftImage: images.nft_image_1,
-      time: {
-        days: 87,
-        hours: 29,
+        days: 43,
+        hours: 33,
         minutes: 10,
-        seconds: 15,
+        seconds: 49,
       },
     },
   ];
@@ -119,14 +81,13 @@ const BigNFTSilder = () => {
             </div>
 
             <div className={Style.bigNFTSlider_box_left_creator_collection}>
-              <AiFillFire
+              <AiFillBook
                 className={Style.bigNFTSlider_box_left_creator_collection_icon}
               />
 
               <div
                 className={Style.bigNFTSlider_box_left_creator_collection_info}
               >
-                <p>Collection</p>
                 <h4>{sliderData[idNumber].collection}</h4>
               </div>
             </div>
@@ -136,15 +97,13 @@ const BigNFTSilder = () => {
             <div className={Style.bigNFTSlider_box_left_bidding_box}>
               <small>Current Bid</small>
               <p>
-                {sliderData[idNumber].price} <span>$221,21</span>
+                {sliderData[idNumber].price}
               </p>
             </div>
 
             <p className={Style.bigNFTSlider_box_left_bidding_box_auction}>
-              <MdTimer
-                className={Style.bigNFTSlider_box_left_bidding_box_icon}
-              />
-              <span>Auction ending in</span>
+              
+              <span>Auction Deadline</span>
             </p>
 
             <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
@@ -178,7 +137,7 @@ const BigNFTSilder = () => {
             </div>
 
             <div className={Style.bigNFTSlider_box_left_button}>
-              <Button btnName="Place" handleClick={() => {}} />
+              <Button btnName="Spot" handleClick={() => {}} />
               <Button btnName="View" handleClick={() => {}} />
             </div>
           </div>
@@ -191,6 +150,7 @@ const BigNFTSilder = () => {
             <TbArrowBigRightLine
               className={Style.bigNFTSlider_box_left_sliderBtn_icon}
               onClick={() => inc()}
+
             />
           </div>
         </div>

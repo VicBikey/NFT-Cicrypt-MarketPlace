@@ -5,7 +5,7 @@
 
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    align-items: center;
+    align-items: normal;
 }
 
 .bigNFTSlider_box_left{
@@ -38,7 +38,7 @@
 .bigNFTSlider_box_left_creator{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    align-items: center;
+    align-items: normal;
 }
 
 .bigNFTSlider_box_left_creator_profile{
@@ -164,7 +164,6 @@
     padding: .5rem 1rem;
     border-radius: 5rem;
 }
-
 
 @media screen and (max-width: 65em) {
     .bigNFTSlider_box{

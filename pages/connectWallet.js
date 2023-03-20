@@ -12,35 +12,37 @@ const connectWallet = () => {
   const { currentAccount, connectWallet } = useContext(NFTMarketplaceContext);
   const providerArray = [
     {
-      provider: images.provider1,
-      name: "Metamask",
-    },
-    {
-      provider: images.provider2,
-      name: "walletConnect",
+      provider: images.provider4,
+      name: "Formatic",
     },
     {
       provider: images.provider3,
       name: "walletlink",
     },
     {
+      provider: images.provider2,
+      name: "walletConnect",
+    },
+    {
       provider: images.provider1,
-      name: "Formatic",
+      name: "Metamask",
     },
   ];
   return (
     <div className={Style.connectWallet}>
       <div className={Style.connectWallet_box}>
-        <h1>Connect your wallet</h1>
+        <h1>Connect wallet</h1>
         <p className={Style.connectWallet_box_para}>
-          Connect with one of our avaliabl wallet providers or create a new one
+          Connect with any of our accessible wallet providers or create a new
+          wallet
         </p>
 
         <div className={Style.connectWallet_box_provider}>
           {providerArray.map((el, i) => (
             <div
-              className={`${Style.connectWallet_box_provider_item} ${activeBtn == i + 1 ? Style.active : ""
-                }`}
+              className={`${Style.connectWallet_box_provider_item} ${
+                activeBtn == i + 1 ? Style.active : ""
+              }`}
               key={i + 1}
               onClick={() => (setActiveBtn(i + 1), connectWallet())}
             >

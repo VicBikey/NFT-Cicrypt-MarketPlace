@@ -24,10 +24,7 @@ const account = () => {
     <div className={Style.account}>
       <div className={Style.account_info}>
         <h1>Profile settings</h1>
-        <p>
-          You can set preferred display name, create your profile URL and manage
-          other personal settings.
-        </p>
+        <p>Manage your personal data.</p>
       </div>
 
       <div className={Style.account_box}>
