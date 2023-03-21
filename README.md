@@ -1,4 +1,4 @@
-Project URL- nft-cicrypt-market-place-n2z4cc9wg-ciscrypt-nft.vercel.app
+Project URL- https://nft-cicrypt-market-place.vercel.app/
 
 This is Fullstack NFT MarketPlace Website using React JS, Next JS, and Solidity for writing the smart contract.
 It includes the following:
